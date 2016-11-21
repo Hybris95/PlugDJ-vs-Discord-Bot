@@ -1,0 +1,11 @@
+{
+	"PlugDJ": {
+		"Mail": "mail@mail.com",
+		"Password": "password",
+		"Room": "channel"
+	},
+	"Discord": {
+		"TextChannel": "channelId",
+		"Token": "botToken"
+	}
+}
