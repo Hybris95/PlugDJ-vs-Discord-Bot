@@ -1,0 +1,25 @@
+{
+  "name": "plugdj-vs-discord",
+  "version": "1.0.1",
+  "description": "Sends !play to Rhino's Bot from a PlugDJ room",
+  "main": "Bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hybris95/PlugDJ-vs-Discord-Bot.git"
+  },
+  "keywords": [
+    "PlugDJ",
+    "Discord",
+    "Rhino",
+    "Bot"
+  ],
+  "author": "Hybris95",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hybris95/PlugDJ-vs-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Hybris95/PlugDJ-vs-Discord-Bot#readme"
+}

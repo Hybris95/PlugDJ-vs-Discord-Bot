@@ -16,10 +16,12 @@ var client;
 var channel;
 var advanceFunction = function(data)
 {
-	if(data.media){
+	if(data.media && data.currentDJ){
 		var author = data.media.author;
 		var title = data.media.title;
+		var djUsername = data.currentDJ.username;
 		if(channel){
+			channel.sendMessage(djUsername + " just issued " + title + " from PlugDJ room : " + roomPlugDJ);
 			channel.sendMessage("!play " + author + " " + title)
 		}
 	}
@@ -51,5 +53,4 @@ botPlug.on('advance', advanceFunction);
  * Discord Bot
  */
 client = new Discord.Client();
-var promise = client.login(tokenDiscord);
-promise.then(outputSuccess, outputError)
+var promise = client.login(tokenDiscord).then(outputSuccess, outputError)
