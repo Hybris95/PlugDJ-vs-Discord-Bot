@@ -24,6 +24,11 @@ var advanceFunction = function(data)
 			channel.sendMessage(djUsername + " just issued " + title + " from PlugDJ room : " + roomPlugDJ);
 			channel.sendMessage("!play " + author + " " + title)
 		}
+	} else {
+		var waitlist = botPlug.getWaitList();
+		if(waitlist.length == 0){
+			botPlug.joinBooth();
+		}
 	}
 }
 function outputSuccess(token)
