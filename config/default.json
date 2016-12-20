@@ -2,7 +2,8 @@
 	"PlugDJ": {
 		"Mail": "mail@mail.com",
 		"Password": "password",
-		"Room": "channel"
+		"Room": "channel",
+		"DefaultPlaylistId": 1234567
 	},
 	"Discord": {
 		"TextChannel": "channelId",
