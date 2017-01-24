@@ -21,9 +21,21 @@ var advanceFunction = function(data)
 		var author = data.media.author;
 		var title = data.media.title;
 		var djUsername = data.currentDJ.username;
+		var cid = data.media.cid;
+		var format = data.media.format;
 		if(channel){
 			channel.sendMessage(djUsername + " just issued " + title + " from PlugDJ room : " + roomPlugDJ);
-			channel.sendMessage("!play " + author + " " + title)
+			switch(format){
+				case 2:// SoundCloud
+					channel.sendMessage("!play http://api.soundcloud.com/tracks/" + cid);
+					break;
+				case 1:// Youtube
+					channel.sendMessage("!play https://www.youtube.com/watch?v=" + cid);
+					break;
+				default:// Search
+					channel.sendMessage("!play " + author + " " + title);
+					break;
+			}
 		}
 	}
 	setTimeout(joinBoothIfNone, 5000);
